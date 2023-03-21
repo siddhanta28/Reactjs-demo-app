@@ -1,0 +1,10 @@
+.uploadForm {
+    @apply rounded-lg max-w-lg shadow-lg text-left bg-gray-50 px-6 pt-2 pb-8 mt-8 mx-auto;
+}
+.uploadFormLabel {
+    font-size:.75rem;
+    @apply inline-block mb-2 text-gray-500;
+}
+.wepitcherInput {
+    @apply appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 mt-2 leading-tight focus:outline-none focus:bg-white;
+}

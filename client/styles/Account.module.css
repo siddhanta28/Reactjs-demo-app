@@ -1,0 +1,13 @@
+.container {
+  @apply p-0;
+}
+.accountContainer {
+  @apply  w-full flex flex-col justify-center justify-items-center content-center text-center box-border mt-10 mb-20;
+}
+.title {
+  padding-top: calc(100vh / 6);
+  @apply text-center capitalize;
+}
+.description {
+  @apply leading-6 my-4 mx-0 text-base text-center;
+}

@@ -1,0 +1,33 @@
+.wrapper {
+    display:block;
+}
+.navbar {
+    @apply flex items-center justify-between flex-wrap bg-transparent p-6;
+    z-index: 2;
+    position:absolute;
+    width:100%;
+}
+
+.main {
+    position: relative;
+    min-height: calc(100vh - 150px);
+}
+
+.footer {
+    display: flex;
+    flex: 1;
+    padding: 2rem 0;
+    background: #fff;
+    border-top: 1px solid #eaeaea;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    z-index: 2;
+}
+
+.footer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0;
+}

@@ -1,0 +1,47 @@
+version: "2"
+services:
+  mongodb:
+    image: mongo
+    restart: always
+    container_name: mongodb
+    volumes:
+        - ./data-node:/data/db
+    ports:
+        - 27017:27017
+    command: mongod --noauth
+    networks:
+        - wepitchernetwork
+#   client:
+#     build:
+#       context: ./client
+#       args:
+#         npm_install_command: install
+#     volumes:
+#       # This bind mount allows changes on the host file system to affect the container.
+#       # Saving a code file can cause an incremental build, a hot reload in the browser,
+#       # and a reconnection of the debugger.
+#       # The mount is in delegated mode:
+#       # Changes on the host, like saving a code file, immediately affect the container.
+#       # Changes within the container, like build output, make their way back to the host,
+#       # but are not strictly synchronized.
+#       - .:/app:delegated
+#     ports:
+#       - 3000:3000
+#     networks:
+#       - wepitchernetwork
+#     command: npm run start
+#   api:
+#     build: ./api
+#     restart: always
+#     ports:
+#         - "8081:8081"
+#     volumes:
+#         - ./api:/api
+#         - /api/node_modules
+#     depends_on:
+#         - mongodb
+#     networks:
+#         - wepitchernetwork
+networks:
+   wepitchernetwork:
+        driver: bridge
